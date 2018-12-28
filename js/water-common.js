@@ -59,14 +59,14 @@ var bubbleArr = [
 var seaWeedNumbers = 200;
 var seaWeedArr = [
     // Image, Size, maximum level layout
-    ['img/seaweed-1.png', 10],
+    ['img/seaweed-1.png', 40],
     ['img/seaweed-2.png', 100],
     ['img/seaweed-3.png', 100],
     ['img/seaweed-4.png', 50],
     // ['img/seaweed-5.png', 10],
     ['img/seaweed-6.png', 60],
     ['img/seaweed-7.png', 60],
-    ['img/seaweed-8.png', 40],
+    // ['img/seaweed-8.png', 40],
     ['img/seaweed-9.png', 50],
     // ['img/rocks-1.png', 250, 3],
 ]
@@ -94,27 +94,47 @@ function worldGenetarors(){
 
 function createWater() {
     $(".water-1").css({
-        "background": 'linear-gradient(' + waterColors[randomNumber(0, waterColors.length - 1)] + ' , ' + waterColors[randomNumber(0, waterColors.length - 1)],
+        "background": 'linear-gradient(' 
+        + waterColors[randomNumber(0, waterColors.length - 1)] + ' , ' 
+        + waterColors[randomNumber(0, waterColors.length - 1)],
         'opacity': '1',
     })
     $(".water-2").css({
-        "background": 'linear-gradient(to bottom,' + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(20, 30)) + ' 0% , ' + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(30, 50)) + '100%',
+        "background": 'linear-gradient(to bottom,' 
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(50, 60)) + ' 0% , '
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(80, 95)) + ' 50% , ' 
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(50, 60)) + '100%',
         'opacity': '1'
     })
     $(".water-3").css({
-        "background": 'linear-gradient(to bottom,' + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(30, 40)) + ' 0% , ' + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(40, 50)) + '100%',
+        "background": 'linear-gradient(to bottom,' 
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(30, 40)) + ' 0% , '
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(50, 60)) + ' 50% , '
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(40, 60)) + '100%',
         'opacity': '1',
     })
     $(".water-4").css({
-        "background": 'linear-gradient(to bottom,' + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(20, 30)) + ' 0% , ' + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(50, 60)) + '100%',
+        "background": 'linear-gradient(to bottom,' 
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(20, 30)) + ' 0% , ' 
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(50, 60)) + ' 50% , '
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(30, 40)) + '100%',
         'opacity': '1',
     })
     $(".water-5").css({
-        "background": 'linear-gradient(to bottom,' + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(0,5)) + ' 0% , ' + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(10,30)) + '100%',
+        "background": 'linear-gradient(to bottom,' 
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(1, 5)) + ' 0% , ' 
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(5, 10)) + ' 50% , '
+        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(1, 5)) + '100%',
         'opacity': '1',
     })
 }
 
+
+// "background": 'linear-gradient(to bottom,'
+//     + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(10, 20)) + '0%,' +
+//     + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(99, 100)) + '50%,' +
+//     + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(10, 20)) + '100%',
+//     'opacity': '1',
 
 
 
@@ -245,40 +265,36 @@ function createBottom() {
     for (var i = 1; i < 5; i++) {
         var classFocus = '.content-' + i; // class target
         var seaWeedImage;
-        var seaweedDirection;
         var seaWeedSize;
         var weedNumber;
-        var topPadding;
-
+        
         // .content-1
         if (i == 1) {
-            seaWeedSize = seaWeedArr[i][1] / 2;
+            console.log(1);
+            seaWeedSize = 1;
             weedNumber = seaWeedNumbers * 4;
-            topPadding = randomNumber(73, 98);
         }
         // .content-2
         else if (i == 2) {
-            seaWeedSize = seaWeedArr[i][1];
+            seaWeedSize = 2;
+            console.log(2);
             weedNumber = seaWeedNumbers * 3;
-            topPadding = randomNumber(73, 98);
         }
         // .content-3
         else if (i == 3) {
-            seaWeedSize = seaWeedArr[i][1] * 2;
+            seaWeedSize = 3;
+            console.log(3);
             weedNumber = seaWeedNumbers * 1.5;
-            topPadding = randomNumber(73, 98);
         }
         // .content-4
         else if (i == 4) {
-            seaWeedSize = seaWeedArr[i][1] * 
-            5;
+            seaWeedSize = 8;
+            console.log(4);
             weedNumber = seaWeedNumbers / randomNumber(4, 8);
-            // topPadding = randomNumber(53, 98);
         }
 
-        // Create fish
+        // Create bottom item
         for (var y = 0; y < weedNumber; y++) {
-
             seaWeedImage = seaWeedArr[randomNumber(0, seaWeedArr.length - 1)][0];
 
             if (randomNumber(0, 1)) {
@@ -295,10 +311,10 @@ function createBottom() {
                 css: {
                     "transform": "rotate(" + fishDirection + ")",
                     // "transform": "rotate(" + randomNumber(0,180) +")",
-                    "width": seaWeedSize,
-                    "height": seaWeedSize,
-                    "left": randomNumber(-5, 95) + "%",
-                    "top": topPadding  + "%",
+                    "width": randomNumber(20, 40) * seaWeedSize,
+                    "height": randomNumber(20, 40) * seaWeedSize,
+                    "left": randomNumber(-25, 95) + "%",
+                    "top": randomNumber(72, 98)  + "%",
                     "opacity": '1',
                     "backgroundImage": "url(" + seaWeedImage + ")",
                     "transform": "rotate(" + randomNumber(-15, 15) + "deg)"
