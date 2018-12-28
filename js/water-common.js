@@ -56,7 +56,7 @@ var bubbleArr = [
 
 
 // Seaweed
-var seaWeedNumbers = 200;
+var seaWeedNumbers = 400;
 var seaWeedArr = [
     // Image, Size, maximum level layout
     ['img/seaweed-1.png', 40],
@@ -93,38 +93,53 @@ function worldGenetarors(){
 
 
 function createWater() {
+    var waterColor1 = waterColors[randomNumber(0, waterColors.length - 1)];
     $(".water-1").css({
         "background": 'linear-gradient(' 
-        + waterColors[randomNumber(0, waterColors.length - 1)] + ' , ' 
-        + waterColors[randomNumber(0, waterColors.length - 1)],
+            + convertHex(waterColor1, randomNumber(30, 40)) + ' 0% , '
+            + convertHex(waterColor1, randomNumber(60, 70)) + ' 20% , '
+            + convertHex(waterColor1, randomNumber(70, 100)) + ' 50% , '
+            + convertHex(waterColor1, randomNumber(20, 30)) + ' 80% , '
+            + convertHex(waterColor1, randomNumber(10, 20)) + '100%',
         'opacity': '1',
     })
+
+    var waterColor2 = waterColors[randomNumber(0, waterColors.length - 1)];
     $(".water-2").css({
         "background": 'linear-gradient(to bottom,' 
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(50, 60)) + ' 0% , '
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(80, 95)) + ' 50% , ' 
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(50, 60)) + '100%',
+            + convertHex(waterColor2, randomNumber(10, 20)) + ' 0% , '
+            + convertHex(waterColor2, randomNumber(20, 30)) + ' 20% , '
+            + convertHex(waterColor2, randomNumber(50, 70)) + ' 50% , '
+            + convertHex(waterColor2, randomNumber(20, 30)) + ' 80% , '
+            + convertHex(waterColor2, randomNumber(10, 20)) + '100%',
         'opacity': '1'
     })
+
+    var waterColor3 = waterColors[randomNumber(0, waterColors.length - 1)];
     $(".water-3").css({
         "background": 'linear-gradient(to bottom,' 
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(30, 40)) + ' 0% , '
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(50, 60)) + ' 50% , '
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(40, 60)) + '100%',
+            + convertHex(waterColor3, randomNumber(10, 20)) + ' 0% , '
+            + convertHex(waterColor3, randomNumber(30, 50)) + ' 20% , '
+            + convertHex(waterColor3, randomNumber(50, 70)) + ' 50% , '
+            + convertHex(waterColor3, randomNumber(40, 50)) + ' 80% , '
+            + convertHex(waterColor3, randomNumber(20, 30)) + '100%',
         'opacity': '1',
     })
+    var waterColor4 = waterColors[randomNumber(0, waterColors.length - 1)];
     $(".water-4").css({
         "background": 'linear-gradient(to bottom,' 
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(20, 30)) + ' 0% , ' 
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(50, 60)) + ' 50% , '
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(30, 40)) + '100%',
+            + convertHex(waterColor4, randomNumber(10, 20)) + ' 0% , ' 
+            + convertHex(waterColor4, randomNumber(30, 50)) + ' 20% , '
+            + convertHex(waterColor4, randomNumber(50, 70)) + ' 50% , '
+            + convertHex(waterColor4, randomNumber(30, 50)) + ' 80% , '
+            + convertHex(waterColor4, randomNumber(20, 30)) + '100%',
         'opacity': '1',
     })
     $(".water-5").css({
         "background": 'linear-gradient(to bottom,' 
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(1, 5)) + ' 0% , ' 
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(5, 10)) + ' 50% , '
-        + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(1, 5)) + '100%',
+            + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(1, 5)) + ' 0% , ' 
+            + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(5, 10)) + ' 50% , '
+            + convertHex(waterColors[randomNumber(0, waterColors.length - 1)], randomNumber(1, 5)) + '100%',
         'opacity': '1',
     })
 }
@@ -165,7 +180,7 @@ function createFish(){
         // .content-4
         else if (i == 4) {
             fishSize = fishArr[i][1] * 2.5; 
-            howManyFishToLayer = randomNumber(0,3);
+            howManyFishToLayer = randomNumber(1,4);
         }
 
         // Create fish
@@ -313,8 +328,8 @@ function createBottom() {
                     // "transform": "rotate(" + randomNumber(0,180) +")",
                     "width": randomNumber(20, 40) * seaWeedSize,
                     "height": randomNumber(20, 40) * seaWeedSize,
-                    "left": randomNumber(-25, 95) + "%",
-                    "top": randomNumber(72, 98)  + "%",
+                    "left": randomNumber(-25, 105) + "%",
+                    "top": randomNumber(72, 105)  + "%",
                     "opacity": '1',
                     "backgroundImage": "url(" + seaWeedImage + ")",
                     "transform": "rotate(" + randomNumber(-15, 15) + "deg)"
