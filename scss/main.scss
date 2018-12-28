@@ -46,6 +46,22 @@ body,html {
     background-repeat: no-repeat;
 }
 
+.bubble {
+    position: absolute;
+    display: block;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.bottom-item {
+    position: absolute;
+    display: block;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 .water-bg {
     position: absolute;
