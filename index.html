@@ -16,6 +16,8 @@
 
 </head>
 <body>
+
+    <div class="preloader"></div>
     
     <div class="app-wrapper">
         <!-- Water 1-->
@@ -40,10 +42,22 @@
         <div class="water-bg water-5 layer-10"></div>
 
         <div class="bottom"></div>
+
+        <button class="next-world-button">
+            <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+
+        <button class="about-author-button">
+            <i class="fa fa-info" aria-hidden="true"></i>
+        </button>
+
+        <button class="settings-button">
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+        </button>
     </div>
 
 
-    <!-- <div class="about-author-modal ">
+    <div class="modal about-author-modal">
         <div class="modal-content">
             <div class="header">
                 <button class="close">
@@ -51,18 +65,38 @@
                 </button>
             </div>
             <div class="body">
+                <h2>Hot keys:</h2>
                 <p>
-                    Galaxy Generator by Maksim K.<br />
+                    <p>Enter - new world</p>
+                </p>
+                <h2>About:</h2>
+                <p>
+                    Underwater World Generator by Maks K.<br />
                     brhumaan@gmail.com<br/>
                     
-                    <a href="https://github.com/brhuman/galaxy-generator" target="_blank">
-                        v 0.2
+                    <a href="https://github.com/brhuman/underwater-world-generator" target="_blank">
+                        github
                         <i class="fa fa-github" aria-hidden="true"></i>
                     </a>
                 </p>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- Settings modal -->
+    <div class="modal settings-modal">
+        <div class="modal-content">
+            <div class="header">
+                <button class="close">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="body">
+                <input type="checkbox" name="ui-preloader-checkbox" id="ui-preloader-checkbox"  checked/>
+                <label for="ui-preloader-checkbox">Hide rendering</label>
+            </div>
+        </div>
+    </div>
 
     <!-- Jquery 3.3.1-->
     <script src="./js/libs/jquery-3.3.1.min.js"></script>
