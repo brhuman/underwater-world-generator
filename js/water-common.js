@@ -222,7 +222,7 @@ function createFish(){
 
             console.log(fishSize)
             
-            fishSize = fishSize * randomNumber(70,100) / randomNumber(70,100);
+            fishSize = fishSize * randomNumber(80,100) / randomNumber(80,100);
             console.log(fishSize)
             
             $("<div>", {
