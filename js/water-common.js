@@ -382,7 +382,7 @@ function preloader() {
     
     setTimeout(() => {
         $(".preloader").fadeOut(400);
-    }, 1000);
+    }, 600);
 }
 
 $("#ui-preloader-checkbox").click(function(){
