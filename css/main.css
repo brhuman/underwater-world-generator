@@ -312,13 +312,13 @@ button:focus {
 .next-world-button {
   z-index: 500; }
 
-.about-author-button {
+.information-button {
   z-index: 500; }
 
 .settings-button {
   z-index: 500; }
 
-.about-author-modal {
+.information-modal {
   z-index: 7700; }
 
 .settings-modal {
@@ -341,7 +341,7 @@ button:focus {
   .next-world-button:hover {
     opacity: 0.9; }
 
-.about-author-button {
+.information-button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -354,7 +354,7 @@ button:focus {
   -webkit-transition: ease-in-out .1s;
   -o-transition: ease-in-out .1s;
   transition: ease-in-out .1s; }
-  .about-author-button:hover {
+  .information-button:hover {
     opacity: 0.9; }
 
 .settings-button {

@@ -92,7 +92,7 @@ $(".next-world-button").click(function(){
 
 
 function nextWorld(){
-    console.log("nextworld started")
+    console.log("nextworld()")
     // If preloader status true
     if(preloaderStatus){
         preloader();
@@ -374,8 +374,6 @@ function clearApp() {
 
 
 // UI
-// FIrst preloader launch
-
 // First preloader launch
 function preloader() {
     $(".preloader").fadeIn(200);
@@ -408,41 +406,44 @@ $(".settings-button, .settings-modal .close").click(function (e) {
 
 
 // Author modal
-$(".about-author-button, .about-author-modal .close").click(function (e) {
+$(".information-button, .information-modal .close").click(function (e) {
     var el = ".element";
 
-    $(".about-author-modal").toggleClass('on');
+    $(".information-modal").toggleClass('on');
 })
 
-// Toggle ui
+// "U -toggle ui
 $(document).keypress(function (e) {
     if (e.which === 85 || e.which === 117 || e.which === 1075 || e.which === 1043) {
-        console.log("Toggle ui")
         $("#ui-hide-checkbox").click();
     }
 });
 
-
+// "S" - keypress settings
 $(document).keypress(function (e) {
-    if (e.which === 115) {
+    if (e.which === 115 || e.which === 83 || e.which === 1099 || e.which === 1067) {
         console.log("Settings")
-        // $(".ui-button-toggle").click();
-
         $(".settings-modal").toggleClass('on');
+    }
+});
+
+// "I" - keypress information
+$(document).keypress(function (e) {
+    if (e.which === 105 || e.which === 73 || e.which === 1064 || e.which === 1096) {
+        console.log("Info")
+        $(".information-modal").toggleClass('on');
     }
 });
 
 
 $("#ui-hide-checkbox").click(function () {
-    console.log('firs: ' + hideUi)
+    console.log('UI toggle')
     if (hideUi === false) {
         hideUi = true;
         $(".app-wrapper").addClass("hide-ui");
-        console.log(hideUi)
     } else {
         hideUi = false;
         $(".app-wrapper").removeClass("hide-ui");
-        console.log(hideUi)
     }
 })
 
