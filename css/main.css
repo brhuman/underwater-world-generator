@@ -305,7 +305,7 @@ button:focus {
   outline: none; }
 
 .app-wrapper.hide-ui .next-world-button,
-.app-wrapper.hide-ui .about-author-button,
+.app-wrapper.hide-ui .information-button,
 .app-wrapper.hide-ui .settings-button {
   display: none !important; }
 

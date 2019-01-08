@@ -42,10 +42,10 @@ var fishArr = [
     ['img/fish-8.png', 100],
     ['img/fish-9.png', 100],
     ['img/fish-10.png', 100],
-    ['img/fish-swarm-1.png', 300],
-    ['img/fish-swarm-2.png', 300],
-    ['img/fish-swarm-3.png', 300],
-    ['img/fish-swarm-4.png', 300],
+    ['img/fish-swarm-1.png', 400],
+    ['img/fish-swarm-2.png', 400],
+    ['img/fish-swarm-3.png', 400],
+    ['img/fish-swarm-4.png', 400],
     ['img/medusa-1.png', 100],
 ]
 
@@ -435,7 +435,7 @@ $(document).keypress(function (e) {
     }
 });
 
-
+// Hide checkbox
 $("#ui-hide-checkbox").click(function () {
     console.log('UI toggle')
     if (hideUi === false) {
