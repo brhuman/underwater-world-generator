@@ -133,8 +133,8 @@ function createWater() {
             + convertHex(waterColor2, randomNumber(10, 20)) + ' 0% , '
             + convertHex(waterColor2, randomNumber(20, 30)) + ' 20% , '
             + convertHex(waterColor2, randomNumber(50, 70)) + ' 50% , '
-            + convertHex(waterColor2, randomNumber(40, 50)) + ' 80% , '
-            + convertHex(waterColor2, randomNumber(30, 40)) + '100%',
+            + convertHex(waterColor2, randomNumber(40, 60)) + ' 80% , '
+            + convertHex(waterColor2, randomNumber(30, 50)) + '100%',
         'opacity': '1'
     })
 
@@ -144,8 +144,8 @@ function createWater() {
             + convertHex(waterColor3, randomNumber(10, 20)) + ' 0% , '
             + convertHex(waterColor3, randomNumber(30, 50)) + ' 20% , '
             + convertHex(waterColor3, randomNumber(60, 70)) + ' 50% , '
-            + convertHex(waterColor3, randomNumber(50, 60)) + ' 80% , '
-            + convertHex(waterColor3, randomNumber(40, 50)) + '100%',
+            + convertHex(waterColor3, randomNumber(50, 70)) + ' 80% , '
+            + convertHex(waterColor3, randomNumber(40, 60)) + '100%',
         'opacity': '1',
     })
     var waterColor4 = waterColors[randomNumber(0, waterColors.length - 1)];
@@ -154,7 +154,7 @@ function createWater() {
             + convertHex(waterColor4, randomNumber(10, 20)) + ' 0% , ' 
             + convertHex(waterColor4, randomNumber(50, 50)) + ' 20% , '
             + convertHex(waterColor4, randomNumber(60, 70)) + ' 50% , '
-            + convertHex(waterColor4, randomNumber(40, 50)) + ' 80% , '
+            + convertHex(waterColor4, randomNumber(40, 60)) + ' 80% , '
             + convertHex(waterColor4, randomNumber(30, 40)) + '100%',
         'opacity': '1',
     })
@@ -163,7 +163,7 @@ function createWater() {
         "background": 'linear-gradient(to bottom,' 
             + convertHex(waterColor5, randomNumber(2, 4)) + ' 0% , ' 
             + convertHex(waterColor5, randomNumber(2, 4)) + ' 50% , '
-            + convertHex(waterColor5, randomNumber(2, 4)) + '100%',
+            + convertHex(waterColor5, randomNumber(2, 40)) + '100%',
         'opacity': '1',
     })
 }
