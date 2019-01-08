@@ -3,7 +3,7 @@
 
 // UI
 var preloaderStatus = true;
-
+var hideUi = false;
 
 // Variables
 var waterColors =[
@@ -220,10 +220,10 @@ function createFish(){
                 fishDirection = 'scale(-1,1)';
             }
 
-            console.log(fishSize)
+            
             
             fishSize = fishSize * randomNumber(80,100) / randomNumber(80,100);
-            console.log(fishSize)
+            
             
             $("<div>", {
                 'class': "fish",
@@ -413,6 +413,39 @@ $(".about-author-button, .about-author-modal .close").click(function (e) {
 
     $(".about-author-modal").toggleClass('on');
 })
+
+// Toggle ui
+$(document).keypress(function (e) {
+    if (e.which === 85 || e.which === 117 || e.which === 1075 || e.which === 1043) {
+        console.log("Toggle ui")
+        $("#ui-hide-checkbox").click();
+    }
+});
+
+
+$(document).keypress(function (e) {
+    if (e.which === 115) {
+        console.log("Settings")
+        // $(".ui-button-toggle").click();
+
+        $(".settings-modal").toggleClass('on');
+    }
+});
+
+
+$("#ui-hide-checkbox").click(function () {
+    console.log('firs: ' + hideUi)
+    if (hideUi === false) {
+        hideUi = true;
+        $(".app-wrapper").addClass("hide-ui");
+        console.log(hideUi)
+    } else {
+        hideUi = false;
+        $(".app-wrapper").removeClass("hide-ui");
+        console.log(hideUi)
+    }
+})
+
 
 
 

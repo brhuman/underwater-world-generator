@@ -2,6 +2,18 @@ button:focus {
     outline: none;
 }
 
+
+.app-wrapper {
+    
+    &.hide-ui {
+        .next-world-button,
+        .about-author-button,
+        .settings-button {
+            display: none !important;
+        }
+    }
+}
+
 // Buttons
 .next-world-button {z-index: 500;}
 .about-author-button{z-index: 500;}
@@ -129,50 +141,65 @@ button:focus {
             align-content: center;
             align-items: center;
             flex-wrap: wrap;
-            padding: 50px 20px 50px;
+            padding: 30px 20px 30px;
             
-            label {
-                font-size: 18px;
-                margin-left: 8px;
-                cursor: pointer;
-            }
-            input[type='checkbox'] {
-                width: 17px;
-                height: 17px;
-            }
-            h2 {
-                font-size: 24px;
+            .item-wrap {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
                 width: 100%;
-                text-align: center;
-                margin-top: 0;
-                margin-bottom: 0;
-            }
-            p {
-                text-align: center;
-                font-size: 18px;
-                line-height: 28px;
-                margin: 0 0 20px;
-            }
-            p:last-child {
-                margin-bottom: 0;
-            }
+                margin-bottom: 10px;
 
-            a {
-                font-size: 18px;
-                color: #fff;
-                text-decoration: none;
-                i {
-                    transition: all .2s;
-                    position: relative;
-                    top: 2px;
-                    left: 4px;
-                    color: #fff;
-                    font-size: 22px;
+                label {
+                    font-size: 18px;
+                    margin-left: 8px;
+                    cursor: pointer;
                 }
-                &:hover i {
-                    transform: scale(1.2);
+                input[type='checkbox'] {
+                    width: 20px;
+                    height: 20px;
+                }
+                h3 {
+                    display: block;
+                    width: 100%;
+                    font-size: 24px;
+                    width: 100%;
+                    text-align: center;
+                    margin-top: 0;
+                    margin-bottom: 8px;
+                }
+                p {
+                    text-align: left;
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin: 0 0 20px;
+                    span {
+                        font-weight: 800;
+                    }
+                }
+                p:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    font-size: 18px;
+                    color: #fff;
+                    text-decoration: none;
+                    i {
+                        transition: all .2s;
+                        position: relative;
+                        top: 2px;
+                        left: 4px;
+                        color: #fff;
+                        font-size: 22px;
+                    }
+                    &:hover i {
+                        transform: scale(1.2);
+                    }
                 }
             }
+            
+
         }
     }
 }

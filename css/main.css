@@ -304,6 +304,11 @@ template {
 button:focus {
   outline: none; }
 
+.app-wrapper.hide-ui .next-world-button,
+.app-wrapper.hide-ui .about-author-button,
+.app-wrapper.hide-ui .settings-button {
+  display: none !important; }
+
 .next-world-button {
   z-index: 500; }
 
@@ -445,44 +450,59 @@ button:focus {
       align-items: center;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      padding: 50px 20px 50px; }
-      .modal .modal-content .body label {
-        font-size: 18px;
-        margin-left: 8px;
-        cursor: pointer; }
-      .modal .modal-content .body input[type='checkbox'] {
-        width: 17px;
-        height: 17px; }
-      .modal .modal-content .body h2 {
-        font-size: 24px;
+      padding: 30px 20px 30px; }
+      .modal .modal-content .body .item-wrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
         width: 100%;
-        text-align: center;
-        margin-top: 0;
-        margin-bottom: 0; }
-      .modal .modal-content .body p {
-        text-align: center;
-        font-size: 18px;
-        line-height: 28px;
-        margin: 0 0 20px; }
-      .modal .modal-content .body p:last-child {
-        margin-bottom: 0; }
-      .modal .modal-content .body a {
-        font-size: 18px;
-        color: #fff;
-        text-decoration: none; }
-        .modal .modal-content .body a i {
-          -webkit-transition: all .2s;
-          -o-transition: all .2s;
-          transition: all .2s;
-          position: relative;
-          top: 2px;
-          left: 4px;
+        margin-bottom: 10px; }
+        .modal .modal-content .body .item-wrap label {
+          font-size: 18px;
+          margin-left: 8px;
+          cursor: pointer; }
+        .modal .modal-content .body .item-wrap input[type='checkbox'] {
+          width: 20px;
+          height: 20px; }
+        .modal .modal-content .body .item-wrap h3 {
+          display: block;
+          width: 100%;
+          font-size: 24px;
+          width: 100%;
+          text-align: center;
+          margin-top: 0;
+          margin-bottom: 8px; }
+        .modal .modal-content .body .item-wrap p {
+          text-align: left;
+          font-size: 18px;
+          line-height: 28px;
+          margin: 0 0 20px; }
+          .modal .modal-content .body .item-wrap p span {
+            font-weight: 800; }
+        .modal .modal-content .body .item-wrap p:last-child {
+          margin-bottom: 0; }
+        .modal .modal-content .body .item-wrap a {
+          font-size: 18px;
           color: #fff;
-          font-size: 22px; }
-        .modal .modal-content .body a:hover i {
-          -webkit-transform: scale(1.2);
-          -ms-transform: scale(1.2);
-          transform: scale(1.2); }
+          text-decoration: none; }
+          .modal .modal-content .body .item-wrap a i {
+            -webkit-transition: all .2s;
+            -o-transition: all .2s;
+            transition: all .2s;
+            position: relative;
+            top: 2px;
+            left: 4px;
+            color: #fff;
+            font-size: 22px; }
+          .modal .modal-content .body .item-wrap a:hover i {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2); }
 
 body, html {
   height: 100vh; }
