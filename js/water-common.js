@@ -154,15 +154,15 @@ function createWater() {
             + convertHex(waterColor4, randomNumber(10, 20)) + ' 0% , ' 
             + convertHex(waterColor4, randomNumber(50, 50)) + ' 20% , '
             + convertHex(waterColor4, randomNumber(60, 70)) + ' 50% , '
-            + convertHex(waterColor4, randomNumber(40, 60)) + ' 80% , '
-            + convertHex(waterColor4, randomNumber(30, 40)) + '100%',
+            + convertHex(waterColor4, randomNumber(30, 60)) + ' 80% , '
+            + convertHex(waterColor4, randomNumber(10, 40)) + '100%',
         'opacity': '1',
     })
     var waterColor5 = waterColors[randomNumber(0, waterColors.length - 1)];
     $(".water-5").css({
         "background": 'linear-gradient(to bottom,' 
-            + convertHex(waterColor5, randomNumber(2, 4)) + ' 0% , ' 
-            + convertHex(waterColor5, randomNumber(2, 4)) + ' 50% , '
+            + convertHex(waterColor5, randomNumber(2, 10)) + ' 0% , ' 
+            + convertHex(waterColor5, randomNumber(2, 10)) + ' 50% , '
             + convertHex(waterColor5, randomNumber(2, 40)) + '100%',
         'opacity': '1',
     })
@@ -316,22 +316,22 @@ function createBottom() {
         
         // .content-1
         if (i == 1) {
-            seaWeedSize = 1;
+            seaWeedSize = randomNumber(1.0, 1.5);
             weedNumber = seaWeedNumbers * 4;
         }
         // .content-2
         else if (i == 2) {
-            seaWeedSize = 2;
+            seaWeedSize = randomNumber(1.5, 2);
             weedNumber = seaWeedNumbers * 3;
         }
         // .content-3
         else if (i == 3) {
-            seaWeedSize = 3;
+            seaWeedSize = randomNumber(2,5);
             weedNumber = seaWeedNumbers * 1.5;
         }
         // .content-4
         else if (i == 4) {
-            seaWeedSize = 8;
+            seaWeedSize = randomNumber(4,8);
             weedNumber = seaWeedNumbers / randomNumber(4, 8);
         }
 
