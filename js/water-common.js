@@ -6,7 +6,7 @@ var preloaderStatus = true;
 var hideUi = false;
 
 // Variables
-var waterColors =[
+const waterColors = [
     // '#B1E5EF',
     // '#C9E7ED',
     // '#C7EAE5',
