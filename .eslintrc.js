@@ -18,6 +18,7 @@ module.exports = {
 
     "rules": {
         "linebreak-style": 0,
-        "indent": [2,4]
+        "indent": [2,4],
+        "no-console": 0
     }
 };

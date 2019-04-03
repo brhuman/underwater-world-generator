@@ -98,8 +98,8 @@ function clearApp() {
     return $('.content-wrap').children().remove();
 }
 
-function convertHex(hex, opacity) {
-    hex = hex.replace('#', '');
+function convertHex(hexInc, opacity) {
+    const hex = hexInc.replace('#', '');
     const r = parseInt(hex.substring(0, 2), 16);
     const g = parseInt(hex.substring(2, 4), 16);
     const b = parseInt(hex.substring(4, 6), 16);
@@ -165,7 +165,7 @@ function createWater() {
 
 function createFish() {
     // Go to every content-wrap
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i < 5; i += 1) {
         const classFocus = `.content-${i}`; // class target
         let fishImage;
         let fishSize;
@@ -175,34 +175,21 @@ function createFish() {
         if (i === 1) {
             fishSize = fishArr[i][1] / 5;
             howManyFishToLayer = fishNumber;
-        }
-        // .content-2
-        else if (i === 2) {
+        } else if (i === 2) {
             fishSize = fishArr[i][1] / 2;
             howManyFishToLayer = fishNumber / randomNumber(1, 5);
-        }
-        // .content-3
-        else if (i === 3) {
+        } else if (i === 3) {
             fishSize = fishArr[i][1] * 1.3;
             howManyFishToLayer = fishNumber / randomNumber(5, 8);
-        }
-        // .content-4
-        else if (i === 4) {
+        } else if (i === 4) {
             fishSize = fishArr[i][1] * 2.5;
             howManyFishToLayer = randomNumber(1, 4);
         }
 
         // Create fish
-        for (let y = 0; y < howManyFishToLayer; y++) {
+        for (let y = 0; y < howManyFishToLayer; y += 1) {
+            // eslint-disable-next-line prefer-destructuring
             fishImage = fishArr[randomNumber(0, fishArr.length - 1)][0];
-
-            if (randomNumber(0, 1)) {
-                // to left
-                fishDirection = 'scale(1,1)';
-            } else {
-                // to right
-                fishDirection = 'scale(-1,1)';
-            }
 
             fishSize = fishSize * randomNumber(80, 100) / randomNumber(80, 100);
 
@@ -225,7 +212,7 @@ function createFish() {
 
 function createBubbles() {
     // Go to every content-wrap
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i < 5; i += 1) {
         const classFocus = `.content-${i}`; // class target
         let bubbleImage;
         let bubbleSize;
@@ -247,17 +234,9 @@ function createBubbles() {
         }
 
         // Create fish
-        for (let y = 0; y < howManyFishToLayer; y++) {
-            
+        for (let y = 0; y < howManyFishToLayer; y += 1) {
+            // eslint-disable-next-line prefer-destructuring
             bubbleImage = bubbleArr[randomNumber(0, bubbleArr.length - 1)][0];
-            
-            if (randomNumber(0, 1)) {
-                // to left
-                fishDirection = 'scale(1,1)';
-            } else {
-                // to right
-                fishDirection = 'scale(-1,1)';
-            }
 
 
             $('<div>', {
@@ -279,7 +258,7 @@ function createBubbles() {
 
 function createBottom() {
     // Go to every content-wrap
-    for (let i = 1; i < 5; i++) {
+    for (let i = 1; i < 5; i += 1) {
         const classFocus = `.content-${i}`; // class target
         let seaWeedImage;
         let seaWeedSize;
@@ -301,16 +280,9 @@ function createBottom() {
         }
 
         // Create bottom item
-        for (let y = 0; y < weedNumber; y++) {
+        for (let y = 0; y < weedNumber; y += 1) {
+            // eslint-disable-next-line prefer-destructuring
             seaWeedImage = seaWeedArr[randomNumber(0, seaWeedArr.length - 1)][0];
-
-            if (randomNumber(0, 1)) {
-                // to left
-                fishDirection = 'scale(1,1)';
-            } else {
-                // to right
-                fishDirection = 'scale(-1,1)';
-            }
 
             $('<div>', {
                 class: 'bottom-item',
